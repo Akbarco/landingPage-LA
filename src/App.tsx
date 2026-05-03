@@ -1,4 +1,4 @@
-const downloadHref = "https://github.com/Akbarco/landingPage-LA/releases/download/v1.0.0/Langganinaja-v1.0.0.apk";
+const downloadHref = "https://github.com/Akbarco/LangganinAJa/releases/tag/v1.0.0";
 
 const features = [
   {
