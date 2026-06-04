@@ -51,52 +51,52 @@ const painPoints = [
 
 const insights = [
   {
-    title: "Breakdown kategori",
-    body: "Streaming, tools, utilitas, edukasi, game.",
-    value: "5 kategori",
+    title: "Lihat per Kategori",
+    body: "Cek pengeluaran untuk streaming, edukasi, atau game.",
+    value: "5 Kategori",
   },
   {
-    title: "Top langganan termahal",
-    body: "Urutkan layanan yang paling besar menguras budget.",
+    title: "Langganan Termahal",
+    body: "Cari tahu layanan apa yang paling bikin dompet tipis.",
     value: "Rp310K",
   },
   {
-    title: "Tren jatuh tempo",
-    body: "Lihat pola pembayaran beberapa bulan ke depan.",
-    value: "6 bulan",
+    title: "Jadwal Jatuh Tempo",
+    body: "Intip jadwal bayar-bayar buat beberapa bulan ke depan.",
+    value: "6 Bulan",
   },
   {
-    title: "Status budget",
-    body: "Aman, warning, atau sudah melewati batas bulanan.",
+    title: "Status Budget",
+    body: "Pantau pengeluaranmu masih aman atau udah peringatan.",
     value: "82%",
   },
 ];
 
 const offlinePoints = [
-  { icon: "📱", title: "Data di HP", desc: "SQLite lokal, tidak ada cloud" },
+  { icon: "📱", title: "Tersimpan di HP", desc: "Semua catatan kamu cuma ada di HP ini, nggak kemana-mana." },
   {
     icon: "🔒",
-    title: "Akun lokal",
-    desc: "Per perangkat, tanpa login server",
+    title: "Akun per HP",
+    desc: "Akun kamu disimpan langsung di perangkat, bukan di server manapun.",
   },
-  { icon: "🌐", title: "100% Offline", desc: "Fitur inti tanpa internet" },
-  { icon: "📤", title: "Export", desc: "Backup database kapan saja" },
-  { icon: "🔐", title: "PIN Lock", desc: "Akses aman 4 digit" },
-  { icon: "🛡️", title: "Privasi", desc: "Data tidak dikirim ke mana pun" },
+  { icon: "🌐", title: "Bisa Kapan Aja", desc: "Nggak ada sinyal pun, aplikasi tetap jalan lancar." },
+  { icon: "📤", title: "Cadangkan Data", desc: "Simpan datamu ke file lain biar nggak gampang hilang." },
+  { icon: "🔐", title: "Kunci Aplikasi", desc: "Pasang PIN biar nggak sembarang orang bisa intip." },
+  { icon: "🛡️", title: "Privasi Terjaga", desc: "Kami nggak mengumpulkan atau mengintip datamu sama sekali." },
 ];
 
 const steps = [
   {
-    title: "Download APK",
-    body: "Install Langganinaja langsung di perangkat Android.",
+    title: "Download Aplikasi",
+    body: "Install Langganinaja langsung di HP Android kamu.",
   },
   {
-    title: "Buat akun lokal",
-    body: "Register di HP yang sama tanpa server dan tanpa akun cloud.",
+    title: "Langsung Pakai",
+    body: "Nggak usah ribet bikin akun atau pusingin internet.",
   },
   {
-    title: "Catat langganan",
-    body: "Tambahkan layanan, cek dashboard, lalu tandai pembayaran saat sudah dibayar.",
+    title: "Mulai Mencatat",
+    body: "Masukin daftar langgananmu, dan pantau pengeluarannya setiap bulan.",
   },
 ];
 
@@ -118,32 +118,26 @@ function App() {
           href={downloadHref}
           download
         >
-          Download APK
+          Download Aplikasi
         </a>
       </header>
 
       <main id="top">
         <section className="hero section-pad">
           <div className="hero-copy">
-            <p className="eyebrow">Full Offline Android App</p>
             <h1>Kelola semua langganan dari satu aplikasi offline.</h1>
             <p className="lead">
               Langganinaja bantu kamu mencatat biaya langganan, melihat total
               pengeluaran bulanan, memantau tanggal bayar, dan menyimpan riwayat
-              pembayaran tanpa server.
+              pembayaran langsung di HP-mu.
             </p>
             <div className="hero-actions" aria-label="Aksi utama">
               <a className="button button-primary" href={downloadHref} download>
-                Download APK
+                Download Aplikasi
               </a>
               <a className="button button-secondary" href="#features">
                 Lihat fitur
               </a>
-            </div>
-            <div className="trust-notes" aria-label="Ringkasan kepercayaan">
-              <span>Data tersimpan lokal</span>
-              <span>Tidak perlu backend</span>
-              <span>Android APK</span>
             </div>
           </div>
 
@@ -202,31 +196,27 @@ function App() {
           </div>
         </section>
 
-        <section className="offline-block color-block block-navy" id="offline">
-          <div className="offline-container">
-            <div className="offline-header">
+        <section className="offline-block color-block block-cream" id="offline">
+          <div className="offline-container-new">
+            <div className="offline-header-new">
               <p className="eyebrow">Offline dan privat</p>
               <h2>Data tetap di perangkat kamu</h2>
-              <p className="offline-lead">
-                Tanpa koneksi internet, tanpa akun cloud, tanpa dashboard web.
+              <p className="offline-lead-new">
+                Nggak butuh internet, nggak butuh akun, nggak ada data yang keluar dari HP kamu.
               </p>
             </div>
 
-            <div className="offline-cards">
+            <div className="offline-cards-new">
               {offlinePoints.map((point) => (
-                <div className="offline-card" key={point.title}>
-                  <span className="offline-icon">{point.icon}</span>
-                  <div className="offline-card-content">
-                    <strong>{point.title}</strong>
-                    <p>{point.desc}</p>
-                  </div>
+                <div className="offline-card-new" key={point.title}>
+                  <strong>{point.title}</strong>
+                  <p>{point.desc}</p>
                 </div>
               ))}
             </div>
 
-            <p className="offline-footnote">
-              Semua data tersimpan di SQLite lokal. Ingat untuk export/backup
-              sebelum pindah HP.
+            <p className="offline-footnote-new">
+              Semua catatanmu cuma ada di HP ini. Kalau mau ganti HP, jangan lupa simpan datanya dulu ya.
             </p>
           </div>
         </section>
@@ -244,19 +234,28 @@ function App() {
           </div>
           <div className="analytics-layout">
             <div className="chart-panel">
-              <div className="chart-header">
-                <span>Budget bulan ini</span>
-                <strong>82%</strong>
+              <div className="chart-label">Budget bulan ini</div>
+              <div className="chart-donut-wrap" aria-hidden="true">
+                <svg className="chart-donut" viewBox="0 0 120 120">
+                  <circle cx="60" cy="60" r="48" fill="none" stroke="rgba(255,255,255,0.3)" strokeWidth="12" />
+                  <circle cx="60" cy="60" r="48" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="12"
+                    strokeDasharray="246.6" strokeDashoffset="44.4"
+                    strokeLinecap="round"
+                    style={{transform: "rotate(-90deg)", transformOrigin: "60px 60px"}} />
+                  <text x="60" y="56" textAnchor="middle" dominantBaseline="middle" className="donut-pct">82%</text>
+                  <text x="60" y="72" textAnchor="middle" dominantBaseline="middle" className="donut-sub">terpakai</text>
+                </svg>
               </div>
-              <div className="bar-stack" aria-hidden="true">
-                <span className="bar streaming" />
-                <span className="bar tools" />
-                <span className="bar utilities" />
-              </div>
-              <div className="legend">
-                <span>Streaming</span>
-                <span>Tools</span>
-                <span>Utilitas</span>
+              <div className="chart-breakdown" aria-hidden="true">
+                <div className="breakdown-item">
+                  <span className="dot dot-a" /><span>Streaming</span>
+                </div>
+                <div className="breakdown-item">
+                  <span className="dot dot-b" /><span>Tools</span>
+                </div>
+                <div className="breakdown-item">
+                  <span className="dot dot-c" /><span>Utilitas</span>
+                </div>
               </div>
             </div>
             <div className="insight-list">
@@ -304,12 +303,12 @@ function App() {
           </div>
           <div className="download-action">
             <a className="button button-primary" href={downloadHref} download>
-              Download APK
+              Download Aplikasi
             </a>
             <div className="download-meta">
               <span>Versi 1.0.0</span>
-              <span>Android APK</span>
-              <span>Frontend download tanpa login</span>
+              <span>Aplikasi Android</span>
+              <span>Download langsung gratis</span>
             </div>
           </div>
         </section>
