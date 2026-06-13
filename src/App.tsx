@@ -126,11 +126,6 @@ function App() {
         <section className="hero section-pad">
           <div className="hero-copy">
             <h1>Kelola semua langganan dari satu aplikasi offline.</h1>
-            <p className="lead">
-              Langganinaja bantu kamu mencatat biaya langganan, melihat total
-              pengeluaran bulanan, memantau tanggal bayar, dan menyimpan riwayat
-              pembayaran langsung di HP-mu.
-            </p>
             <div className="hero-actions" aria-label="Aksi utama">
               <a className="button button-primary" href={downloadHref} download>
                 Download Aplikasi
